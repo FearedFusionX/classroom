@@ -1,61 +1,83 @@
-@import url('https://fonts.googleapis.com/css?family=Rakkas');
+* { box-sizing: border-box;}
 
-body{
-  background-color:#232728;
-  overflow:hidden;
-  font-family:'Rakkas';
-}
-#pixiCanvas{
-  position:absolute;
-}
-.title{
-  position:absolute;
-  left:50%;
-  top:50%;
-  text-align:center;
-  transform:translate(-50%, -50%);
-  color:white;
-  font-size:5em;
-}
-.title{
-  position:absolute;
-  left:50%;
-  top:50%;
-  text-align:center;
-  transform:translate(-50%, -50%);
-  color:#DBAB4C;
-  font-size:4em;
+$primaryColor: deeppink;
+$dkBg: #303947;
+$itemBg: #6788a7;
+$itemBgOdd: darken(#6788a7,15%);
+
+html, body {
+  font-family: "Arial", sans-serif;
+  background: #fff;
+  padding: 80px 30px 30px;
+  color: #444;
+  height: 100%;
 }
 
-.paragraph{
-  position:absolute;
-  left:50%;
-  top:70%;
-  text-align:center;
-  transform:translate(-50%, -50%);
-  color:white;
-  font-size:1em;
+ol, ul {
+  margin: 0 0 50px 0;
 }
 
-
-#credits{
-  position:absolute;
-  width:100%;
-  margin: auto;
-  bottom:0;
-  margin-bottom:12px;
-  font-family:'Rakkas', sans-serif;
-  letter-spacing:0.1rem;
-  color:#777;
-  font-size:0.7em;
-  text-transform: uppercase;
-  text-align : center;
-}
-#credits a {
-  color:#777;
-  text-decoration:none;
+h1 {
+  font-weight: bold;
+  color: black;
 }
 
-#credits a:hover {
-  color:#DBAB4C;
+p {
+  line-height: 1.6em;
+  margin-bottom: 10px;
+  font-size: 18px;
+  padding: 0;
+  &:last-child {
+    margin-bottom: 40px;
+  }
+}
+
+code {
+  background: #f8f8f8;
+  color: #d64f9b;
+  border: 1px solid #eee;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+a {
+  font-weight: bold;
+  color: $primaryColor; 
+  text-decoration: none;
+  transition: all 200ms;
+  &:hover,
+  &:focus{
+    color: black;
+  }
+}
+
+article {
+  min-height: 50vh;
+  margin-bottom: 50px;
+  .margin {
+    margin-bottom: 100vh;
+  }
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: $dkBg;
+  position: fixed;
+  padding: 30px;
+  a {
+    display: inline-flex;
+    padding: 20px 30px;
+    color: #fff;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: white;
+    }
+    &.active {
+      color: $primaryColor;
+    }
+  }
 }
